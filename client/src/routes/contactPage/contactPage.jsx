@@ -1,69 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import "./contactPage.scss";
 
 function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://static-bundles.visme.co/forms/vismeforms-embed.js";
+    script.async = true;
+    document.body.appendChild(script);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission, e.g., send data to server or perform validation
-    console.log(formData);
-    // Reset form fields after submission
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
-  };
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
-    <div className="contactPage">
-      <div className="textContainer">
-        <div className="wrapper">
-          <h1 className="title">Contact Us</h1>
-        </div>
-      </div>
-      <div className="formContainer">
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          ></textarea>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-      
+    <div className="visme_d" 
+         data-title="Untitled Project" 
+         data-url="319r9z81-untitled-project" 
+         data-domain="forms" 
+         data-full-page="false" 
+         data-min-height="700px" 
+         data-form-id="68976">
     </div>
   );
 }

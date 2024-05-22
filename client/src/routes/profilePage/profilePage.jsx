@@ -13,7 +13,7 @@ function ProfilePage() {
   const data = useLoaderData();
   const { currentUser, fetchCurrentUser, updateUser } = useContext(AuthContext);
   const navigate = useNavigate();
-  const [rating, setRating] = useState(0); // State to track the rating
+  const [rating, setRating] = useState(0); 
 
   useEffect(() => {
     const fetchData = async () => {

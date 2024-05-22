@@ -126,6 +126,7 @@ export const google = async (req, res, next) => {
 export const logout = (req, res) => {
   res.clearCookie("token").status(200).json({ message: "Logout Successful" });
 };
+
 export const getCurrentUser = async (req, res) => {
   try {
     const token = req.cookies.token;

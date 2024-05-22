@@ -176,7 +176,7 @@ function Chat({ chats: initialChats }) {
             <span>{c.receiver.username}</span>
             <p>{c.lastMessage}</p>
             <img  className="deletechat" src="/images.png" alt="" />
-            <a href="your link here " target="_blank" rel="noopener noreferrer">
+            <a href="https://gounaich.github.io/vedio-call/" target="_blank" rel="noopener noreferrer">
               <img className="callicon" src="/call-icon.png" alt="" />
             </a>
             

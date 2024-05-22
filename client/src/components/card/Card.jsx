@@ -12,7 +12,7 @@ function Card({ item }) {
     if (!currentUser) {
       e.preventDefault();
       toast.warn("You need to log in to view this post!");
-      navigate("/login");  // Assuming there's a login route
+      navigate("/login");  
     }
   };
 
