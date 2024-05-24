@@ -5,20 +5,17 @@ import "./aboutPage.scss";
 function AboutPage() {
   return (
     <div className="aboutPage">
-      <div className="imgContainer">
-        <img src="/bg-about.png" alt="" />
-      </div>
+      <h1 className="title">About Us</h1>
       <div className="textContainer">
         <div className="wrapper">
-          <h1 className="title">About Us</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-            explicabo suscipit cum eius, iure est nulla animi consequatur
-            facilis id pariatur fugit quos laudantium temporibus dolor ea
-            repellat provident impedit!
+            At <strong>Smsar EstateFinder</strong>, we are passionate about connecting people with their dream homes. Whether you are looking for a cozy apartment in the city or a spacious countryside estate, we have you covered.
           </p>
           {/* Additional content */}
         </div>
+      </div>
+      <div className="imgContainer">
+        <img src="/bg-about.png" alt="" />
       </div>
     </div>
   );

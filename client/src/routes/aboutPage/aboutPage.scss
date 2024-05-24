@@ -4,7 +4,23 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  .title {
+    font-size: 3.5rem;
+    color: #333;
+    text-align: center;
 
+    @include lg {
+      font-size: 2.5rem;
+    }
+
+    @include md {
+      font-size: 2rem;
+    }
+
+    @include sm {
+      font-size: 1.8rem;
+    }
+  }
   .imgContainer {
     height: 400px;
     width: 100%;
@@ -48,22 +64,7 @@
         padding: 10px;
       }
 
-      .title {
-        font-size: 3.5rem;
-        color: #333;
-
-        @include lg {
-          font-size: 2.5rem;
-        }
-
-        @include md {
-          font-size: 2rem;
-        }
-
-        @include sm {
-          font-size: 1.8rem;
-        }
-      }
+   
 
       p {
         font-size: 1.2rem;

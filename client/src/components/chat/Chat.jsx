@@ -7,8 +7,6 @@ import { SocketContext } from "../../context/SocketContext";
 import { useNotificationStore } from "../../lib/notificationStore";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { AiOutlinePhone } from 'react-icons/ai';
-import { Link } from "react-router-dom";
 
 function Chat({ chats: initialChats }) {
   const { currentUser } = useContext(AuthContext);
